@@ -1,0 +1,17 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Викторина!" Height="600" Width="500"
+        Loaded="WindowLoaded" Closing="WindowClosing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.05*"/>
+        </Grid.RowDefinitions>
+        <Frame NavigationUIVisibility="Hidden" x:Name="Frame"/>
+        <Button Grid.Row="1" HorizontalAlignment="Right" Width="50" Margin="5" x:Name="CloseBtn" Visibility="Collapsed" Click="CloseBtnClicked">Выйти</Button>
+    </Grid>
+</Window>

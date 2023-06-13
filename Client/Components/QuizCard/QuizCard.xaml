@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Client.Components.QuizCard.QuizCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Client.Components.QuizCard"
+             mc:Ignorable="d"
+             d:DesignHeight="150" d:DesignWidth="150">
+    <Grid>
+        <Grid.DataContext>
+            <Binding>
+                <Binding.UpdateSourceTrigger>
+                    PropertyChanged
+                </Binding.UpdateSourceTrigger>
+                <Binding.Source>
+                    <local:QuizCardViewModel x:Name="ViewModel"/>
+                </Binding.Source>
+            </Binding>
+        </Grid.DataContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="{Binding Path=.Text}" FontSize="18" TextWrapping="Wrap"/>
+        <Button Grid.Row="1" Grid.Column="0" Margin="5" Click="AnswerClicked" Content="{Binding Path=Answer1}"/>
+        <Button Grid.Row="1" Grid.Column="1" Margin="5" Click="AnswerClicked" Content="{Binding Path=Answer2}"/>
+        <Button Grid.Row="2" Grid.Column="1" Margin="5" Click="AnswerClicked" Content="{Binding Path=Answer4}"/>
+        <Button Grid.Row="2" Grid.Column="0" Margin="5" Click="AnswerClicked" Content="{Binding Path=Answer3}"/>
+    </Grid>
+</UserControl>

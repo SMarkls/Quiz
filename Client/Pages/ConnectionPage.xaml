@@ -1,0 +1,24 @@
+﻿<Page x:Class="Client.Pages.ConnectionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Client.Pages"
+      mc:Ignorable="d"
+      Title="ConnectionPage" Height="250" Width="500">
+    <Grid HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" x:Name="NameTextBox"/>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center">Введите ваше имя:</TextBlock>
+        <TextBox Grid.Row="2" x:Name="RoomNameTextBox"/>
+        <TextBlock Grid.Row="3">Введите название комнаты:</TextBlock>
+        <Button Grid.Row="5" Click="ConnectClicked">Войти</Button>
+    </Grid>
+</Page>
